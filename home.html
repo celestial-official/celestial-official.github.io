@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Eternal | Data</title>
+	</head>
+
+	<body>
+		<script>
+			function returnData() {
+				return fetch("https://api.ipify.org?format=json").then(response => response.json()).then(data => {
+					return JSON.stringify(data);
+				}).catch(error => {
+					return JSON.strigify({error: "Couldn't fetch requested data."});
+				});
+			}
+			
+			returnData();
+		</script>
+	</body>
+</html>
