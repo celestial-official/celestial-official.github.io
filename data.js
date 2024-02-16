@@ -5,3 +5,5 @@ function returnData() {
 		return JSON.strigify({error: "Couldn't fetch requested data."});
 	});
 }
+
+returnData();
